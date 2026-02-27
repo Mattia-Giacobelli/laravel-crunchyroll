@@ -6,3 +6,79 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+// Bootstrap-icons
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+//Background color
+body {
+
+    background-color: rgb(27, 27, 27) !important;
+}
+
+
+//
+//HEADER
+//
+
+
+
+//
+//MAIN
+//
+
+main {
+
+    //Table
+    table {
+
+        a {
+
+            color: rgb(255, 123, 0);
+            text-decoration: none;
+        }
+    }
+
+
+    //Form
+    form {
+
+        label {
+
+            color: white;
+        }
+
+        span {
+
+            color: white;
+        }
+    }
+
+
+    //Action Buttons
+    .buttons {
+
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+
+        .back {
+
+            background-color: rgb(255, 123, 0);
+            color: black;
+            border: 1px solid rgb(255, 123, 0);
+            border-radius: 10px;
+            padding: 0.5rem 1rem;
+        }
+    }
+
+
+    //Card
+    .card {
+
+        border: 2px solid rgb(22, 22, 22);
+    }
+
+
+}

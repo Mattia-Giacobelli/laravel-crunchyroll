@@ -24,7 +24,7 @@ return new class extends Migration
             $table->smallInteger('episodes_duration');
             $table->smallInteger('vote');
             $table->date('release_date');
-            $table->date('end_date');
+            $table->date('end_date')->nullable();
             $table->boolean('completed');
 
             $table->timestamps();

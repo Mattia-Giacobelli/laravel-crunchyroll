@@ -1,7 +1,11 @@
 <?php
 
 use App\Http\Controllers\AnimeController;
+use App\Http\Controllers\DubController;
+use App\Http\Controllers\GenreController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SubController;
+use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -20,6 +24,15 @@ Route::middleware('auth')->group(function () {
 
 
 Route::resource('anime', AnimeController::class)->middleware(['auth', 'verified']);
+
+Route::resource('genre', GenreController::class)->middleware(['auth', 'verified']);
+
+Route::resource('type', TypeController::class)->middleware(['auth', 'verified']);
+
+Route::resource('sub', SubController::class)->middleware(['auth', 'verified']);
+
+Route::resource('dub', DubController::class)->middleware(['auth', 'verified']);
+
 
 
 require __DIR__ . '/auth.php';

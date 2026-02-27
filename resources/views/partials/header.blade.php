@@ -1,6 +1,6 @@
 <header>
     
-    <nav class="navbar navbar-expand-sm navbar-light bg-white shadow-sm">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark shadow-sm">
             <div class="container d-flex justify-content-between">
                 <div>
                     <ul class="navbar-nav">
@@ -13,19 +13,24 @@
                                 <a class="nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('anime') }}">{{__('Anime')}}</a>
+                                <a class="nav-link {{ request()->routeIs('anime.index') ? 'active' : '' }}" 
+                                    href="{{ url('anime') }}">{{__('Anime')}}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('genres') }}">{{__('Genre')}}</a>
+                                <a class="nav-link {{ request()->routeIs('genre.index') ? 'active' : '' }}" 
+                                    href="{{ url('genre') }}">{{__('Genre')}}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('type') }}">Type</a>
+                                <a class="nav-link {{ request()->routeIs('type.index') ? 'active' : '' }}" 
+                                    href="{{ url('type') }}">Type</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('sub') }}">Sub</a>
+                                <a class="nav-link {{ request()->routeIs('sub.index') ? 'active' : '' }}" 
+                                    href="{{ url('sub') }}">Sub</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('dub') }}">Dub</a>
+                                <a class="nav-link {{ request()->routeIs('dub.index') ? 'active' : '' }}" 
+                                    href="{{ url('dub') }}">Dub</a>
                             </li>
                         @endguest
                     </ul>
@@ -38,9 +43,9 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse navbar-dark" id="navbarSupportedContent">
                         <!-- Right Side Of Navbar -->
-                        <ul class="navbar-nav ml-auto">
+                        <ul class="navbar-nav navbar-dark bg-dark ml-auto">
                             <!-- Authentication Links -->
                             @guest
                             <li class="nav-item">
@@ -57,8 +62,8 @@
                                     {{ Auth::user()->name }}
                                 </a>
                                 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                <div class="dropdown-menu dropdown-menu-dark dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item  text-light" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                     </a>
