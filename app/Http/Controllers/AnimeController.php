@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Anime;
 use Illuminate\Http\Request;
 
 class AnimeController extends Controller
@@ -11,10 +12,9 @@ class AnimeController extends Controller
      */
     public function index()
     {
-        $anime =     
+        $animes = Anime::all();
 
-        return view('anime/index', co)
-
+        return view('anime/index', compact('animes'));
     }
 
     /**
@@ -36,15 +36,18 @@ class AnimeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Anime $anime)
     {
-        //
+
+        // dd($anime);
+
+        return view('anime.show', compact('anime'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Anime $anime)
     {
         //
     }
@@ -52,7 +55,7 @@ class AnimeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Anime $anime)
     {
         //
     }
@@ -60,7 +63,7 @@ class AnimeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Anime $anime)
     {
         //
     }

@@ -28,8 +28,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '2009-04-05',
                 'end_date' => '2010-07-04',
                 'completed' => true,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [2, 3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [2, 3],
                 'genres' => [1, 2, 3, 5], // Azione, Avventura, Fantasy, Drama
             ],
             [
@@ -45,8 +45,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '2013-04-07',
                 'end_date' => '2023-11-04',
                 'completed' => true,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [2, 3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [2, 3],
                 'genres' => [1, 3, 5, 10], // Azione, Fantasy, Drama, Psicologico
             ],
             [
@@ -62,8 +62,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '2006-10-04',
                 'end_date' => '2007-06-27',
                 'completed' => true,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [2, 3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [2, 3],
                 'genres' => [8, 10], // Thriller, Psicologico
             ],
             [
@@ -79,8 +79,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '2004-10-05',
                 'end_date' => '2012-03-27',
                 'completed' => true,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [2, 3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [2, 3],
                 'genres' => [1, 2, 3], // Azione, Avventura, Fantasy
             ],
             [
@@ -96,8 +96,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '2019-04-06',
                 'end_date' => '2019-09-28',
                 'completed' => true,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [2, 3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [2, 3],
                 'genres' => [1, 3], // Azione, Fantasy
             ],
             [
@@ -113,8 +113,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '1999-10-20',
                 'end_date' => '2026-12-31',
                 'completed' => false,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [2, 3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [2, 3],
                 'genres' => [1, 2, 3], // Azione, Avventura, Fantasy
             ],
             [
@@ -130,8 +130,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '2017-10-03',
                 'end_date' => '2021-03-30',
                 'completed' => true,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [3],
                 'genres' => [1, 3], // Azione, Fantasy
             ],
             [
@@ -147,8 +147,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '2015-04-05',
                 'end_date' => '2015-06-28',
                 'completed' => true,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [],
                 'genres' => [4, 5, 6], // Sci-Fi, Drama, Romance
             ],
             [
@@ -164,8 +164,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '2022-01-09',
                 'end_date' => '2022-03-27',
                 'completed' => true,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [2, 3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [2, 3],
                 'genres' => [6, 7], // Romance, Slice of Life
             ],
             [
@@ -181,8 +181,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '2011-04-06',
                 'end_date' => '2011-09-14',
                 'completed' => true,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [2, 3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [2, 3],
                 'genres' => [4, 8, 10], // Sci-Fi, Thriller, Psicologico
             ],
             [
@@ -198,8 +198,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '2016-04-03',
                 'end_date' => '2024-10-01',
                 'completed' => false,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [2, 3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [2, 3],
                 'genres' => [1, 3], // Azione, Fantasy
             ],
             [
@@ -215,8 +215,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '1998-04-03',
                 'end_date' => '1999-04-24',
                 'completed' => true,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [2, 3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [2, 3],
                 'genres' => [1, 2, 4], // Azione, Avventura, Sci-Fi
             ],
             [
@@ -232,8 +232,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '2020-10-03',
                 'end_date' => '2023-12-28',
                 'completed' => true,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [2, 3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [2, 3],
                 'genres' => [1, 3], // Azione, Fantasy
             ],
             [
@@ -249,8 +249,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '2001-07-20',
                 'end_date' => '2001-07-20',
                 'completed' => true,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [2, 3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [2, 3],
                 'genres' => [2, 3, 5], // Avventura, Fantasy, Drama
             ],
             [
@@ -266,8 +266,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '1995-10-04',
                 'end_date' => '1996-03-27',
                 'completed' => true,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [2, 3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [2, 3],
                 'genres' => [1, 4, 10], // Azione, Sci-Fi, Psicologico
             ],
             [
@@ -283,8 +283,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '2011-10-02',
                 'end_date' => '2014-09-24',
                 'completed' => true,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [3],
                 'genres' => [1, 2, 3], // Azione, Avventura, Fantasy
             ],
             [
@@ -300,8 +300,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '2006-10-06',
                 'end_date' => '2008-09-28',
                 'completed' => true,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [2, 3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [2, 3],
                 'genres' => [1, 4, 5, 10], // Azione, Sci-Fi, Drama, Psicologico
             ],
             [
@@ -317,8 +317,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '2019-07-07',
                 'end_date' => '2023-06-20',
                 'completed' => true,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [2, 3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [2, 3],
                 'genres' => [1, 2, 5], // Azione, Avventura, Drama
             ],
             [
@@ -334,8 +334,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '2016-07-11',
                 'end_date' => '2022-12-22',
                 'completed' => true,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [2, 3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [2, 3],
                 'genres' => [1, 7, 10], // Azione, Slice of Life, Psicologico
             ],
             [
@@ -351,8 +351,8 @@ class AnimeTableSeeder extends Seeder
                 'release_date' => '2018-01-11',
                 'end_date' => '2018-04-05',
                 'completed' => true,
-                'sub_languages' => [1, 2, 3],
-                'dub_languages' => [2, 3],
+                'dub_languages' => [1, 2, 3],
+                'sub_languages' => [2, 3],
                 'genres' => [5, 6, 7], // Drama, Romance, Slice of Life
             ],
         ];
