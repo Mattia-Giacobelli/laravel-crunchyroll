@@ -2,7 +2,7 @@
 
 
 @section('title')
-    {{$genre->name}}
+    {{$dub->language}}
 @endsection
 
 
@@ -11,27 +11,29 @@
     <div class="container mt-4">
         
         <div class="buttons">
-            <a class="back" href="{{ url()->previous() }}">
+            <a class="back" href="{{ url('dub') }}">
                 <i class="bi bi-arrow-left"></i>
             </a>
 
             <div>
-                <a class="btn btn-outline-warning " href="{{ route('genre.edit', $genre)}}">Modifica</a>
+                <a class="btn btn-outline-warning " href="{{ route('dub.edit', $dub)}}">Modifica</a>
 
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-outline-danger " data-bs-toggle="modal" data-bs-target="#exampleModal{{ $genre['id'] }}">
+                <button type="button" class="btn btn-outline-danger " data-bs-toggle="modal" data-bs-target="#exampleModal{{ $dub['id'] }}">
                     Elimina
                 </button>
             </div>
         </div>
 
-        {{-- @dd($genre) --}}
+        {{-- @dd($dub) --}}
         <div class="card bg-dark text-light d-flex">
 
             <div class="p-3">
                 <div class="d-flex justify-content-between">
                     
-                    <h1> {{$genre->name}} </h1>
+                    <h1> Lang: {{$dub->language}} </h1>
+
+                    <h1> Iso: {{$dub->iso_code}} </h1>
 
                 </div>
 
@@ -42,11 +44,11 @@
     </div>
 
      <!-- Modal -->
-    <div class="modal fade" id="exampleModal{{ $genre['id'] }}" tabindex="-1" aria-labelledby="exampleModal{{ $genre['id'] }}Label" aria-hidden="true">
+    <div class="modal fade" id="exampleModal{{ $dub['id'] }}" tabindex="-1" aria-labelledby="exampleModal{{ $dub['id'] }}Label" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content text-light bg-dark">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModal{{ $genre['id'] }}Label">{{$genre->name}}</h1>
+                    <h1 class="modal-title fs-5" id="exampleModal{{ $dub['id'] }}Label">{{$dub->language}}</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -55,7 +57,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
             
-                    <form action="{{ route('genre.destroy', $genre)}}" method="POST">
+                    <form action="{{ route('dub.destroy', $dub)}}" method="POST">
             
                         @csrf
             

@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Aggiungi un Genere
+    Aggiungi una Lingua
 @endsection
 
 
@@ -17,13 +17,18 @@
 
         </div>
 
-        <form action="{{ route('genre.store') }}" method="POST" enctype="multipart/form-data" data-bs-theme="dark">
+        <form action="{{ route('dub.store') }}" method="POST" enctype="multipart/form-data" data-bs-theme="dark">
 
             @csrf
 
             <div class="mb-3">
-                <label for="name" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="name" name="name">
+                <label for="language" class="form-label">Lingua</label>
+                <input type="text" class="form-control" id="language" name="language">
+            </div>
+
+            <div class="mb-3">
+                <label for="iso_code" class="form-label">Iso code</label>
+                <input type="text" class="form-control" id="iso_code" name="iso_code">
             </div>
 
             

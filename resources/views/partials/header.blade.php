@@ -25,12 +25,12 @@
                                     href="{{ url('type') }}">Type</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ request()->routeIs('sub.index') ? 'active' : '' }}" 
-                                    href="{{ url('sub') }}">Sub</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link {{ request()->routeIs('dub.index') ? 'active' : '' }}" 
                                     href="{{ url('dub') }}">Dub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ request()->routeIs('sub.index') ? 'active' : '' }}" 
+                                    href="{{ url('sub') }}">Sub</a>
                             </li>
                         @endguest
                     </ul>
