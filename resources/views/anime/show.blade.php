@@ -11,7 +11,7 @@
     <div class="container mt-4">
         
         <div class="buttons">
-            <a class="back" href="{{ url()->previous() }}">
+            <a class="back" href="{{ url('anime') }}">
                 <i class="bi bi-arrow-left"></i>
             </a>
 

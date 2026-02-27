@@ -11,7 +11,7 @@
     <div class="container  mt-5">
 
         <div class="d-flex justify-content-end">
-            <a class="btn btn-primary" href="{{ route('anime.create')}}">Aggiungi un progetto</a>
+            <a class="btn btn-primary" href="{{ route('anime.create')}}">Aggiungi un Anime</a>
         </div>
 
         <table class="table table-striped table-dark mt-4 w-100">

@@ -30,7 +30,7 @@
 
             
 
-            <button type="submit" class="btn btn-primary">Aggiungi</button>
+            <button type="submit" class="btn btn-primary">Modifica</button>
         </form>
 
     </div>

@@ -17,7 +17,7 @@
 
         </div>
 
-        <form action="{{ route('dub.store') }}" method="POST" enctype="multipart/form-data" data-bs-theme="dark">
+        <form action="{{ route('sub.store') }}" method="POST" enctype="multipart/form-data" data-bs-theme="dark">
 
             @csrf
 
