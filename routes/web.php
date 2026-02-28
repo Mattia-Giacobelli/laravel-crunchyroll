@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AnimeController;
 use App\Http\Controllers\DubController;
+use App\Http\Controllers\EpisodeController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SubController;
@@ -32,6 +33,14 @@ Route::resource('type', TypeController::class)->middleware(['auth', 'verified'])
 Route::resource('sub', SubController::class)->middleware(['auth', 'verified']);
 
 Route::resource('dub', DubController::class)->middleware(['auth', 'verified']);
+
+Route::get('/episode/create/{anime}', [EpisodeController::class, 'create'])->name('anime.episode.create');
+
+Route::post('/episode/store/{anime}', [EpisodeController::class, 'store'])->name('anime.episode.store');
+
+Route::resource('episode', EpisodeController::class)->middleware(['auth', 'verified']);
+
+
 
 
 

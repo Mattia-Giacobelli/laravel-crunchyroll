@@ -63,8 +63,6 @@
                 </select>
             </div>
 
-            {{-- @dd($technologies) --}}
-
             <span class="d-block mb-2">Generi</span>
             
             @foreach ($genres as $genre)
@@ -105,7 +103,7 @@
             <div class="mb-3">
                 <label for="cover" class="form-label">Copertina</label>
                 
-                <div class="d-flex align-items-center form-control">
+                <div class="d-flex align-items-center justify-content-between form-control">
                     <input type="file"  id="cover" name="cover">
 
                     @if ($anime->cover != '')

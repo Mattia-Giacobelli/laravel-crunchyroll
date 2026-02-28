@@ -10,6 +10,7 @@ use App\Models\Sub;
 use App\Models\Type;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class AnimeController extends Controller
 {
@@ -83,7 +84,7 @@ class AnimeController extends Controller
 
         if (array_key_exists('cover', $data)) {
 
-            $imgURL = Storage::putFile('anime', $data['cover']);
+            $imgURL = Storage::putFile('anime' . Str::slug($newAnime->name), $data['cover']);
 
             $newAnime->cover = $imgURL;
         }
@@ -107,8 +108,6 @@ class AnimeController extends Controller
      */
     public function show(Anime $anime)
     {
-
-        // dd($anime);
 
         return view('anime.show', compact('anime'));
     }
@@ -176,7 +175,7 @@ class AnimeController extends Controller
 
             Storage::delete($anime->cover);
 
-            $imgURL = Storage::putFile('anime', $data['cover']);
+            $imgURL = Storage::putFile('anime'  . Str::slug($anime->name), $data['cover']);
 
             $anime->cover = $imgURL;
         }

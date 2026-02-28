@@ -21,7 +21,8 @@ class DatabaseSeeder extends Seeder
             GenresTableSeeder::class,
             SubsTableSeeder::class,
             TypesTableSeeder::class,
-            AnimeTableSeeder::class
+            AnimeTableSeeder::class,
+            EpisodesTableSeeder::class
         ]);
     }
 }

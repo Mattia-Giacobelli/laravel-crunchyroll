@@ -104,6 +104,91 @@
             </div>
         </div>
 
+
+        {{-- @dd($anime->episodesList) --}}
+
+        {{-- Adding episodes List --}}
+
+        <div class="mt-5">
+            <div class="d-flex justify-content-end">
+                <a class="btn btn-primary" href="{{ route('anime.episode.create', $anime)}}">Aggiungi un episodio</a>
+            </div>
+
+            <table class="table table-striped table-dark mt-4 w-100">
+                <thead>
+                    {{-- <th></th> --}}
+                    <th scope="col">Copertina</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Durata</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </thead>
+
+                <tbody >
+
+                    @foreach ($anime->episodesList as $episode)
+                        {{-- {{$project->id}} --}}
+                        <tr>
+
+                            <td class="align-middle">
+                                <a href="{{route('episode.show', $episode['id'])}}">
+                                    <img src="{{ asset('storage/' . $episode->cover) }}" alt="copertina episodio" width="50px">
+                                </a>
+                            </td>
+
+                            <td class="align-middle"><a href="{{route('episode.show', $episode['id'])}}">{{$episode['title']}}</a></td>
+                            
+                            <td class="align-middle">{{$episode->duration}} min</td>
+
+                            <td>
+                                <a class="btn btn-outline-warning " href="{{ route('episode.edit', $episode)}}">Modifica</a>
+                            </td>
+
+                            <td>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-outline-danger " data-bs-toggle="modal" data-bs-target="#exampleModal{{ $episode['id'] }}">
+                                    Elimina
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal{{ $episode['id'] }}" tabindex="-1" aria-labelledby="exampleModal{{ $episode['id'] }}Label" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content text-light bg-dark">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModal{{ $episode['id'] }}Label">{{$episode->name}}</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Elimina l'episodio
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                
+                                        <form action="{{ route('episode.destroy', $episode)}}" method="POST">
+                
+                                            @csrf
+                
+                                            @method('DELETE')
+                
+                
+                                            <button type="submit" class="btn btn-danger">Elimina</button>
+                                        </form>
+                                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    @endforeach
+
+                </tbody>
+            </table>
+        </div>
+
     </div>
 
      <!-- Modal -->
