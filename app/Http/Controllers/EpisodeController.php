@@ -86,11 +86,13 @@ class EpisodeController extends Controller
 
         if (array_key_exists('cover', $data)) {
 
+            $anime = $episode->anime;
+
             //Delete the old image
 
             Storage::delete($episode->cover);
 
-            $imgURL = Storage::putFile('episo$episode'  . Str::slug($episode->title), $data['cover']);
+            $imgURL = Storage::putFile('anime/'  . Str::slug($anime->name), $data['cover']);
 
             $episode->cover = $imgURL;
         }
