@@ -25,12 +25,11 @@ class AnimeController extends Controller
 
     public function show(Anime $anime)
     {
+        $anime->load(['animationStudio', 'type', 'genres', 'subs', 'dubs', 'episodesList']);
 
-        return response()->json(
-            [
-                'success' => true,
-                'data' => $anime::with(['genres', 'subs', 'dubs', 'episodesList'])->get()
-            ]
-        );
+        return response()->json([
+            'success' => true,
+            'data' => $anime
+        ]);
     }
 }

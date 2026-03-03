@@ -27,7 +27,7 @@ class GenreController extends Controller
     public function animeIndex(Genre $genre)
     {
 
-        $animes = $genre->animes;
+        $animes = $genre->animes()->with(['animationStudio', 'type', 'genres', 'subs', 'dubs', 'episodesList'])->get();
 
         // dd($animes);
 
