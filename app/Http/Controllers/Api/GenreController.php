@@ -22,4 +22,18 @@ class GenreController extends Controller
             ]
         );
     }
+
+
+    public function animeIndex(Genre $genre)
+    {
+
+        $animes = $genre->animes;
+
+        // dd($animes);
+
+        return response()->json([
+            'success' => true,
+            'data' => $animes
+        ]);
+    }
 }
