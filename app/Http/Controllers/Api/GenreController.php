@@ -36,4 +36,13 @@ class GenreController extends Controller
             'data' => $animes
         ]);
     }
+
+    public function show(Genre $genre)
+    {
+
+        return response()->json([
+            'success' => true,
+            'data' => $genre
+        ]);
+    }
 }

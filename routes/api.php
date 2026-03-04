@@ -23,5 +23,8 @@ Route::get('/episodes/{episode}', [EpisodeController::class, 'show']);
 //Genres index
 Route::get('/genres', [GenreController::class, 'index']);
 
+//Genres show
+Route::get('/genres/{genre}', [GenreController::class, 'show']);
+
 //Genres animes index
-Route::get('/genres/{genre}', [GenreController::class, 'animeIndex']);
+Route::get('/genres/animes/{genre}', [GenreController::class, 'animeIndex']);
