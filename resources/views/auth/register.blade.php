@@ -5,10 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header bg-dark text-light">{{ __('Register') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                <div class="card-body bg-dark text-light">
+                    <form method="POST" action="{{ route('register') }}" data-bs-theme="dark">
                         @csrf
 
                         <div class="mb-4 row">
