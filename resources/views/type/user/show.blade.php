@@ -2,7 +2,7 @@
 
 
 @section('title')
-    {{ $sub->language }}
+    {{ $type->name }}
 @endsection
 
 
@@ -10,30 +10,28 @@
     <div class="container mt-4">
 
         <div class="buttons">
-            <a class="back" href="{{ url('sub') }}">
+            <a class="back" href="{{ url('user/type') }}">
                 <i class="bi bi-arrow-left"></i>
             </a>
 
             <div>
-                <a class="btn btn-outline-warning " href="{{ route('sub.edit', $sub) }}">Modifica</a>
+                <a class="btn btn-outline-warning " href="{{ route('user.type.edit', $type) }}">Modifica</a>
 
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-outline-danger " data-bs-toggle="modal"
-                    data-bs-target="#exampleModal{{ $sub['id'] }}">
+                    data-bs-target="#exampleModal{{ $type['id'] }}">
                     Elimina
                 </button>
             </div>
         </div>
 
-        {{-- @dd($sub) --}}
+        {{-- @dd($type) --}}
         <div class="card bg-dark text-light d-flex">
 
             <div class="p-3">
                 <div class="d-flex justify-content-between">
 
-                    <h1> Lang: {{ $sub->language }} </h1>
-
-                    <h1> Iso: {{ $sub->iso_code }} </h1>
+                    <h1> {{ $type->name }} </h1>
 
                 </div>
 
@@ -44,12 +42,12 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal{{ $sub['id'] }}" tabindex="-1"
-        aria-labelledby="exampleModal{{ $sub['id'] }}Label" aria-hidden="true">
+    <div class="modal fade" id="exampleModal{{ $type['id'] }}" tabindex="-1"
+        aria-labelledby="exampleModal{{ $type['id'] }}Label" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content text-light bg-dark">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModal{{ $sub['id'] }}Label">{{ $sub->language }}</h1>
+                    <h1 class="modal-title fs-5" id="exampleModal{{ $type['id'] }}Label">{{ $type->name }}</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -58,7 +56,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
 
-                    <form action="{{ route('sub.destroy', $sub) }}" method="POST">
+                    <form action="{{ route('user.type.destroy', $type) }}" method="POST">
 
                         @csrf
 

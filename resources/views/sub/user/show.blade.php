@@ -10,12 +10,12 @@
     <div class="container mt-4">
 
         <div class="buttons">
-            <a class="back" href="{{ url('sub') }}">
+            <a class="back" href="{{ url('user/sub') }}">
                 <i class="bi bi-arrow-left"></i>
             </a>
 
             <div>
-                <a class="btn btn-outline-warning " href="{{ route('sub.edit', $sub) }}">Modifica</a>
+                <a class="btn btn-outline-warning " href="{{ route('user.sub.edit', $sub) }}">Modifica</a>
 
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-outline-danger " data-bs-toggle="modal"
@@ -58,7 +58,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
 
-                    <form action="{{ route('sub.destroy', $sub) }}" method="POST">
+                    <form action="{{ route('user.sub.destroy', $sub) }}" method="POST">
 
                         @csrf
 

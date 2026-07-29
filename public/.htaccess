@@ -1,3 +1,14 @@
+DirectoryIndex index.php
+
+<FilesMatch "^\.env|composer\.(json|lock)|package\.(json|lock)|artisan">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+Options -Indexes
+
+RedirectMatch 404 ^/laravel_core(/|$)
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
@@ -5,16 +16,16 @@
 
     RewriteEngine On
 
-    # Handle Authorization Header
+    # Gestione dell'Header di Autorizzazione
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-    # Redirect Trailing Slashes If Not A Folder...
+    # Rimuove lo slash finale dagli URL se non sono cartelle reali
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} (.+)/$
     RewriteRule ^ %1 [L,R=301]
 
-    # Send Requests To Front Controller...
+    # Inoltra tutte le richieste al Front Controller (index.php)
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
